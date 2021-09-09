@@ -3,6 +3,7 @@ package com.company;
 import com.company.GUI.Menu;
 import com.company.tools.Message;
 import com.company.tools.Transcoder;
+import org.germain.tool.ManaBox;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -14,13 +15,9 @@ public class Main {
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
+        //System.out.println(ManaBox.decrypt("Z/YsEClWF0UqFYP8eds3sNHbY+wHVf7fZUmzsC8L/WdV1egGct3p6Bnm4hyx9XwMjyoQHPIMRrJ8G5mNsf0qtA=="));
 
-
-        Message testMess = new Message(false,"decode.txt","code.txt","key.txt");
-
-        testMess.readNwrite();
-
-        Menu testMenu = new Menu();
+       Menu testMenu = new Menu();
         testMenu.initializeMenu();
 
 

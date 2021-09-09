@@ -1,6 +1,8 @@
 package com.company.tools;
 
 
+import org.germain.tool.ManaBox;
+
 import java.lang.String;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,10 +10,18 @@ import java.util.Objects;
 
 public class Transcoder {
 
-
+    ManaBox decrypte = new ManaBox();
     private HashMap<String, Character> decodeMap = new HashMap<String, Character>();
     private HashMap<Character, String> encodeMap = new HashMap<Character,String>();
     private String key;
+
+
+
+
+
+
+
+
 
     public Transcoder(String key) {
         this.key = key;
@@ -71,19 +81,19 @@ public class Transcoder {
 
     public String wordCode(String x) {
 
-        String ligneCode = "";
+        StringBuilder ligneCode = new StringBuilder("");
 
         for(char a : x.toCharArray()){
 
             for(char b : getEncodeMap().keySet()){
 
                 if(a==b){
-                     ligneCode += getEncodeMap().get(b);
+                     ligneCode.append(getEncodeMap().get(b));
 
                 }
             }
         }
-return ligneCode;
+return ligneCode.toString();
     }
 
 
